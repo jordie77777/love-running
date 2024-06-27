@@ -129,7 +129,15 @@ footer {
      main {
         /* Push main content down to accumulate larger header */
         margin-top: 79px;
-        
+
      }
 }
  
+/* Media Query for laptops and larger*/
+@media screen and (min-width: 992px){
+
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+}
