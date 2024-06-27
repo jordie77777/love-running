@@ -18,6 +18,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -33,23 +42,16 @@ header {
 
 header a {
     text-decoration: none;
-    color:  inherit;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
+    color: inherit;
 }
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-    }
+}
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -81,9 +83,24 @@ main {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative
 }
 
+#cover-text {
+    /* final rgba value sets the opacity so it is semi transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding: 40px;
+    padding-left: 10px;
+}
 
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+}
 /* Nav Toggle*/
 #nav-toggle:checked~nav {
     display: block;
@@ -115,6 +132,7 @@ main {
 
 /* Media Query tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -128,7 +146,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -140,18 +158,24 @@ main {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
-     }
+    }
 
-     /* Main content */
-     main {
+    /* Main content */
+    main {
         /* Push main content down to accumulate larger header */
         margin-top: 79px;
 
-     }
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
 }
- 
+
 /* Media Query for laptops and larger*/
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
 
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
